@@ -1,6 +1,5 @@
 // src/app/layout.tsx
 import './globals.css';
-import 'bulma/css/bulma.min.css';
 import Navbar from '@/components/Navbar';
 import type { Metadata } from "next";
 
