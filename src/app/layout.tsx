@@ -16,6 +16,11 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
+        {/* Bulma CSS via CDN - Solución infalible para Vercel */}
+        <link 
+          rel="stylesheet" 
+          href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" 
+        />
         {/* Font Awesome para los iconos del Búnker */}
         <link 
           rel="stylesheet" 
@@ -24,7 +29,7 @@ export default function RootLayout({
       </head>
       <body>
          <Navbar />
-        {children}
+         <main>{children}</main>
       </body>
     </html>
   );
