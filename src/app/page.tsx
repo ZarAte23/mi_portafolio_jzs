@@ -1,26 +1,24 @@
 import Image from "next/image";
-// Nota: Navbar no se importa aquí porque ya está en layout.tsx
 
 export default function Home() {
   return (
     <main>
       {/* SECCIÓN 1: HERO CON IMAGEN PROFESIONAL */}
-      {/* Usamos hero-main-bg definido en globals.css */}
       <section className="hero is-fullheight hero-main-bg">
         <div className="hero-body">
           <div className="container has-text-centered">
-            <h1 className="title is-1 has-text-white is-spaced">
-              Joaquín Zárate
+            <h1 className="title is-1 has-text-white is-spaced name-highlight">
+              Joaquin Zárate
             </h1>
             <h2 className="subtitle is-3 has-text-info-light">
-              Software Engineer Jr & Solutions Architect Jr
+              Software Engineer & Solutions Architect
             </h2>
             <div className="column is-8 is-offset-2">
               <p className="is-size-5 has-text-white-ter">
-                Mi objetivo es diseñas y deplegar de arquitecturas
-                híbridas.Mi visión es convertir ideas complejas en infraestructuras
-                escalables mediante el equilibrio combinando
-                <strong className="has-text-blue-light"> High-Code </strong>y
+                Enfocado en el diseño y despliegue de arquitecturas
+                híbridas. Mi visión es convertir ideas complejas en infraestructuras
+                escalables mediante el equilibrio combinando el
+                <strong className="has-text-blue-light"> High-Code </strong> y el
                 <strong className="has-text-blue-light"> No-Code</strong>.
               </p>
             </div>
@@ -36,7 +34,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECCIÓN 2: EL BÚNKER (VALOR AGREGADO) */}
+      {/* SECCIÓN 2: EL BÚNKER (INFRAESTRUCTURA) */}
       <section
         id="infraestructura"
         className="section is-medium has-background-dark has-text-light"
@@ -48,13 +46,12 @@ export default function Home() {
           <div className="columns is-vcentered">
             <div className="column is-6">
               <div className="notification is-slate-custom">
-                {/* Nota: Asegúrate de tener is-slate-custom en globals.css o usa is-info is-light */}
                 <h3 className="title is-4">Dual-Hardware Ecosystem</h3>
-                <p>
+                <p className="is-size-5">
                   Optimizo mi flujo de trabajo mediante un ecosistema dual que
                   garantiza calidad y rendimiento. Utilizo la potencia de{" "}
-                  <strong>Apple Silicon (M1)</strong> para interfaces de alta
-                  fidelidad y la robustez de <strong>WSL2 en Windows 10</strong>{" "}
+                  <strong className="has-text-info">Apple Silicon (M1)</strong> para interfaces de alta
+                  fidelidad y la robustez de <strong className="has-text-info">WSL2 en Windows 10</strong>{" "}
                   para la orquestación de servicios backend, Docker y bases de
                   datos relacionales.
                 </p>
@@ -69,21 +66,22 @@ export default function Home() {
                   ></i>
                 </span>
                 <p className="is-size-4 has-text-weight-bold">Hardware Stack</p>
-                <p>Apple + HP </p>
+                <p className="is-size-5">Apple M1 + HP Workstation</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Fragmento corregido de la Sección de Proyectos */}
+      {/* SECCIÓN 3: PROYECTOS DESTACADOS */}
       <section id="proyectos" className="section has-background-black-bis">
         <div className="container">
           <h2 className="title has-text-centered has-text-white mb-6">
             Proyectos Destacados
           </h2>
           <div className="columns is-multiline">
-            {/* Proyecto 1 */}
+            
+            {/* Proyecto 1: OmniConnect */}
             <div className="column is-4">
               <div className="card project-card">
                 <div className="card-content">
@@ -92,43 +90,47 @@ export default function Home() {
                     <span className="tag is-dark">PostgreSQL</span>
                   </div>
                   <p className="title is-4 has-text-white">OmniConnect API</p>
-                  <div className="content has-text-grey-light">
+                  <div className="content has-text-grey-lighter">
                     API escalable diseñada con <strong>Service Pattern</strong>{" "}
                     para la gestión de inventarios y flujos de datos críticos.
                   </div>
                 </div>
               </div>
             </div>
-            {/* Repetir estructura para otros proyectos... */}
+
+            {/* Proyecto 2: NexusCore (Agregado para variedad) */}
             <div className="column is-4">
               <div className="card project-card">
                 <div className="card-content">
                   <div className="tags mb-2">
-                    <span className="tag is-info is-light">En proceso</span>
-                    
+                    <span className="tag is-warning is-light">En Proceso</span>
+                    <span className="tag is-success is-light">Java 25</span>
+                    <span className="tag is-dark">Spring Boot</span>
                   </div>
-                  <p className="title is-4 has-text-white">Proyecto 2</p>
-                  <div className="content has-text-grey-light">
-                    <strong>Proximamente</strong>{" "}
+                  <p className="title is-4 has-text-white">NexusCore Hub</p>
+                  <div className="content has-text-grey-lighter">
+                    <strong>Próximamente</strong>
                   </div>
                 </div>
               </div>
             </div>
+
+            {/* Proyecto 3: Placeholder Profesional */}
             <div className="column is-4">
               <div className="card project-card">
                 <div className="card-content">
                   <div className="tags mb-2">
-                    <span className="tag is-info is-light">En proceso</span>
-                    
+                    <span className="tag is-warning is-light">En Proceso</span>
+                    <span className="tag is-dark">SRE</span>
                   </div>
-                  <p className="title is-4 has-text-white">Proyecto 3</p>
-                  <div className="content has-text-grey-light">
-                    <strong>Proximamente</strong>{" "}
-                    
+                  <p className="title is-4 has-text-white">Cloud Orchestrator</p>
+                  <div className="content has-text-grey-lighter">
+                    <strong>Próximamente</strong>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
@@ -136,15 +138,17 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="footer has-background-black has-text-white">
         <div className="container has-text-centered">
-          <p className="is-size-7 has-text-white">
-            Joaquín Zárate <strong> || </strong> 2026
+          <p className="is-size-7">
+            Joaquín Zárate <span className="has-text-info">||</span> 2026
           </p>
           <div className="buttons is-centered mt-3">
-            <a href="#" className="button is-dark is-small">
-              GitHub
+            <a href="https://github.com/ZarAte23" className="button is-dark is-small">
+              <span className="icon"><i className="fab fa-github"></i></span>
+              <span>GitHub</span>
             </a>
             <a href="#" className="button is-link is-small">
-              LinkedIn
+              <span className="icon"><i className="fab fa-linkedin"></i></span>
+              <span>LinkedIn</span>
             </a>
           </div>
         </div>
