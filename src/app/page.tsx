@@ -11,7 +11,7 @@ export default function Home() {
               Joaquin Zárate
             </h1>
             <h2 className="subtitle is-3 has-text-info-light">
-              Software Engineer & Solutions Architect
+              Software Engineer & Web Developer
             </h2>
             <div className="column is-8 is-offset-2">
               <p className="is-size-5 has-text-white-ter">
